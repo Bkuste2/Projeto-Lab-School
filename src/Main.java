@@ -27,7 +27,7 @@ public class Main {
         Scanner scInt = new Scanner(System.in);
 
         System.out.println("\n1 - Adicionar um aluno \n2 - Adicionar um professor \n3 - Adicionar um pedagogo \n4 - Relatórios Gerais \n5 - Relatórios dos alunos \n6 - Relatórios dos professores \n7 - Atendimento Pedagógico " +
-                "\n8 - Aluno com mais atendimentos \n9 - Pedagogo com mais atendimentos \n10 - Sair \n\n");
+                "\n8 - Aluno com mais atendimentos \n9 - Pedagogo com mais atendimentos \n10 - Alterar condição da matrícula \n11 - Sair \n\n");
         int escolha = scInt.nextInt();
         switch (escolha) {
             case 1:
@@ -93,6 +93,16 @@ public class Main {
                 StartSistema();
                 break;
             case 10:
+                System.out.println("Id do aluno: ");
+                int num = scInt.nextInt();
+                alunos.forEach(e -> {
+                    if (e.getId() == num){
+                        e.setCondicaoMatriculaStart();
+                    }
+                });
+                StartSistema();
+                break;
+            case 11:
                 System.exit(200);
                 break;
             default:

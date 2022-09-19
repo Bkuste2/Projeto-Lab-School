@@ -74,7 +74,7 @@ public class Aluno extends Pessoa{
     }
 
     /*   METHODS   */
-    private void setCondicaoMatriculaStart(){
+    public void setCondicaoMatriculaStart(){
         Scanner scInt = new Scanner(System.in);
 
         System.out.println("\nCondição da Matrícula: \n1 - Ativo \n2 - Irregular \n3 - Atendimento Pedagógico \n4 - Inativo");

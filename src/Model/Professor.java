@@ -117,7 +117,6 @@ public class Professor extends Pessoa{
         }
     }
 
-
     private void setEstadoStart(){
         Scanner scInt = new Scanner(System.in);
 
